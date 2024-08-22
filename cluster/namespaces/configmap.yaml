@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: demo-config
+  namespace: demo-config
+data:
+  index.html: |
+    <html>
+    <body>
+    <h1>Hi,Roopa</h1>
+    </body>
+    </html>
