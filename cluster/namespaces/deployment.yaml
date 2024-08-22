@@ -1,27 +1,31 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: demo-config
-  namespace: demo-config  # Ensure this namespace is consistent across all files
+  name: project-1
+  namespace: project-1  # Ensure this namespace is consistent across all files
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: demo-config
+      app: project-1
+  
   template:
     metadata:
       labels:
-        app: demo-config
+        app: project-1
+    
     spec:
       containers:
-      - name: demo-config
+      - name: project-1
+  
         image: nginx
         ports:
-        - containerPort: 81
+        - containerPort: 82
         volumeMounts:
         - name: config-volume
           mountPath: /usr/share/nginx/html
       volumes:
       - name: config-volume
         configMap:
-          name: demo-config
+          name: project-1
+      
