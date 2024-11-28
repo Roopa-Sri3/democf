@@ -27,5 +27,5 @@ spec:
       volumes:
       - name: config-volume
         configMap:
-          name: project-1
+          name: project-1-config
       
